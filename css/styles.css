@@ -1,0 +1,15 @@
+.row img {
+  width: 100px;
+  float: left;
+  margin: 10px;
+  background-color: green;
+}
+
+body{
+  background-image: url("img/matrix.gif");
+  background-size: cover;
+}
+
+.jumbotron{
+  background-color: green;
+}
