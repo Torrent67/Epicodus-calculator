@@ -1,40 +1,48 @@
-$(document).ready(function(){
-  $("#add").click(function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result= add(number1,number2);
-    alert(result);
+$(function(){
+  $("#add").click(function(event) {
+    event.preventDefault();
+    var input1 = parseInt($("#number1").val());
+    var input2 = parseInt($("#number2").val());
+    var result = add(input1, input2);
+    $("#output").text(result);
+    $("#output").show();
   });
-  $("#subtract").click(function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result= subtract(number1,number2);
-    alert(result);
+  $("#subtract").click(function(event) {
+    event.preventDefault();
+    var input1 = parseInt($("#number1").val());
+    var input2 = parseInt($("#number2").val());
+    var result = subtract(input1, input2);
+    $("#output").text(result);
+    $("#output").show();
   });
-  $("#multiply").click(function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result= multiply(number1,number2);
-    alert(result);
+  $("#multiply").click(function(event) {
+    event.preventDefault();
+    var input1 = parseInt($("#number1").val());
+    var input2 = parseInt($("#number2").val());
+    var result = multiply(input1, input2);
+    $("#output").text(result);
+    $("#output").show();
   });
-  $("#divide").click(function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result= divide(number1,number2);
-    alert(result);
+  $("#divide").click(function(event) {
+    event.preventDefault();
+    var input1 = parseInt($("#number1").val());
+    var input2 = parseInt($("#number2").val());
+    var result = divide(input1, input2);
+    $("#output").text(result);
+    $("#output").show();
   });
 });
 
 
-var add = function(number1, number2) {
-  return number1 + number2;
+var add = function(input1,input2) {
+  return input1+input2;
 };
-var subtract = function(number1, number2) {
-  return number1 - number2;
+var subtract = function(input1,input2) {
+  return input1-input2;
+}
+var multiply = function(input1,input2) {
+  return input1*input2;
 };
-var multiply = function(number1, number2) {
-  return number1 * number2;
-};
-var divide = function(number1, number2) {
-  return number1 / number2;
+var divide = function(input1,input2) {
+  return input1/input2;
 };

@@ -1,3 +1,6 @@
+.container{
+  display: grid;
+}
 .row img {
   width: 100px;
   float: left;
@@ -12,4 +15,11 @@ body{
 
 .jumbotron{
   background-color: green;
+}
+#output{
+  display: none;
+  grid-area: footer;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black;
 }
